@@ -1,4 +1,7 @@
-MAIN PAGE --------------------
+--------------------
+
+MAIN PAGE
+
 0. Precondition: load application on https://volodymyr-kushnir.github.io/recipes/#/;
 
 =============================
