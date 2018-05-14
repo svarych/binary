@@ -116,7 +116,7 @@ class Tests {
     // 6. "'Ingridients' block has true count of reagents"
     @Test
     @DisplayName("'Ingridients' block has true count of reagents")
-    void hasListOfIngridients() {
+    void hasCorrectCountOfReagents() {
         SelenideElement reagents = card.find(byXpath("(//div[contains(text(),'Ingredients')])"));
         int size = Integer.parseInt(reagents.find(byXpath("//small")).getText().replace("(", "").replace(")", ""));
         reagents.click();
