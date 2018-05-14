@@ -55,3 +55,6 @@ Expected Result: Recipe list loads properly, without error message.
 -----------------------------
 WE CAN AUTOMATE ALL THIS TESTS
 
+-----------------------------
+TO RUN TESTS TYPE "mvn clean test"
+
