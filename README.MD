@@ -4,10 +4,12 @@ MAIN PAGE --------------------
 =============================
 CHECKLIST
 =============================
+
 1. Header should be loaded (one random header)
 2. Recipes should be loaded (no errors, 15 recipes per page)
 
 RECIPES ----------------------
+
 0. Recipe block header has "favorite" and "already cooked" checkboxes and timer;
 1. Recipe block has picture;
 2. Recipe block has header with dish name
@@ -19,6 +21,7 @@ RECIPES ----------------------
 =============================
 CASES
 =============================
+
 0. Precondition: You see recipe that has no views, notes or activated checkboxes. (A newly activated account?)
 1. Click on star icon ("favorite") | ExR: Favorite icon changed color from gray to yellow. | AcR: Same | STATUS: Passed
 2. Click on star icon ("favorite") again | ExR: Favorite icon reverts color back from yellow to gray: | AcR. Same | STATUS: Passed
@@ -40,6 +43,7 @@ STORY
 =============================
 BUG REPORT
 =============================
+
 Bug Summary: Recipe block not loads with some periodicity
 Severity: critical
 Steps to reproduce: 	open the link: https://volodymyr-kushnir.github.io/recipes/#/
