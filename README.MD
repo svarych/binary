@@ -38,7 +38,7 @@ STORY
 
 0. As a regular user, I want the page to load faster, so correct the code or upgrade the server;
 
-1. As a test user, I do not want to have something like that in the code: "if (Math.random() > 0.75) throw new Error('randomly forced throw, 25% chance')"� so hit the hands of those who wrote it!
+1. As a test user, I do not want to have something like that in the code: "if (Math.random() > 0.75) throw new Error('randomly forced throw, 25% chance')" so hit the hands of those who wrote it!
 
 =============================
 BUG REPORT
