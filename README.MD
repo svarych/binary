@@ -34,6 +34,7 @@ CASES
 
 * ExR = Expected result
 * AcR = Actual result
+
 =============================
 STORY
 =============================
