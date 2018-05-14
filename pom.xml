@@ -37,7 +37,7 @@
                 <configuration>
                     <!--<groups>api2.LIVE.addresses</groups>-->
                     <includes>
-                        <include>**/com/tober/bintime/*</include>
+                        <include>**/com/tober/binary/*</include>
                     </includes>
                     <excludes>
                     </excludes>
