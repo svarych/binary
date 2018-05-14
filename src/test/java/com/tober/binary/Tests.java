@@ -1,19 +1,20 @@
 package com.tober.binary;
 
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-
-import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Condition.disappear;
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.*;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class Tests extends MainPage {
+class Tests {
 
     private static SelenideElement card;
 
@@ -26,29 +27,48 @@ class Tests extends MainPage {
 
         // Ignoring 25% throwable
         SelenideElement retry = $(byXpath("//a[.='— Retry.']"));
-        if (retry.isDisplayed()){
-            while (retry.isDisplayed()){
+        if (retry.isDisplayed()) {
+            while (retry.isDisplayed()) {
                 retry.click();
                 retry.shouldBe(disappear);
             }
         }
         card = $(byXpath("(//div[contains(@class,'ui fluid card')])[1]"));
+        card.shouldBe(visible);
         //...
     }
 
-    // 0. Recipe block header has "favorite" and "already cooked" checkboxes and timer
+    // PAGE
+    // 1. Header should be loaded (one random header)
+    @Test
+    @DisplayName("Page has big header")
+    void hasHeader() {
+        $(byXpath("//div[contains(@class,'ui huge center aligned header')]")).shouldBe(visible);
+    }
+
+    // 1. Header should be loaded (one random header)
+    @Test
+    @DisplayName("Page has recipe block with 15 recipes")
+    void hasRecipesBlock() {
+        assertEquals(15, $$(byXpath("(//div[contains(@class,'ui fluid card')])")).size());
+    }
+
+    // RECIPES
+    // 0.0 Recipe block header has "favorite"
     @Test
     @DisplayName("Recipe block header has 'favorite'")
     void hasFavorite() {
         card.find(byClassName("star")).shouldBe(visible);
     }
 
+    //0.1 Recipe block header has "already cooked" checkboxes and timer
     @Test
     @DisplayName("Recipe block header has 'already cooked'")
     void hasCooked() {
         card.find(byClassName("spoon")).shouldBe(visible);
     }
 
+    //0.2 Recipe block header has timer
     @Test
     @DisplayName("Recipe block header has 'timer'")
     void hasTimer() {
@@ -83,12 +103,23 @@ class Tests extends MainPage {
         card.find(byXpath("//div[@class='description']")).shouldBe(visible);
     }
 
-    //TODO debug that
     // 5. Recipe block footer has "Ingridients" block
     @Test
     @DisplayName("Recipe has has 'Ingridients' block")
     void hasIngridientsBlock() {
-        System.out.println(card.$(byXpath("//div[contains(@class,'ui accordion')]")));
+        card.find(byXpath("//div[contains(text(),'Ingredients')]")).shouldBe(visible);
     }
 
+    // INTEGRATION
+    // 6. "'Ingridients' block has true count of reagents"
+    @Test
+    @DisplayName("'Ingridients' block has true count of reagents")
+    void hasListOfIngridients() {
+        SelenideElement reagents = card.find(byXpath("(//div[contains(text(),'Ingredients')])"));
+        int size = Integer.parseInt(reagents.find(byXpath("//small")).getText().replace("(", "").replace(")", ""));
+        reagents.click();
+
+        ElementsCollection reagentsList = card.find(byXpath("//div[contains(@class,'content active')]")).findAll(byAttribute("role", "listitem"));
+        assertEquals(size, reagentsList.size());
+    }
 }
