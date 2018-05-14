@@ -57,7 +57,6 @@ Steps to reproduce: 	open the link: https://volodymyr-kushnir.github.io/recipes/
 			If you don't see it - reload page until bug is reproduced (25% chance)
 Expected Result: Recipe list loads properly, without error message.
 
-
 -----------------------------
 WE CAN AUTOMATE ALL THIS TESTS
 
