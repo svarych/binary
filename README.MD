@@ -58,3 +58,14 @@ WE CAN AUTOMATE ALL THIS TESTS
 -----------------------------
 TO RUN TESTS TYPE "mvn clean test"
 
+-----------------------------
+TO GENERATE REPORT TYPE "allure generate ./target/surefire-reports/ --clean"
+- 'allure-report' will be generated;
+- To view the results open './allure-report/index.html' in your favorite browser.
+
+* Note that 'allure' should be installed on your system
+
+-----------------------------
+Documentation, Demo-report and Examples you can see here: http://allure.qatools.ru/
+
+
