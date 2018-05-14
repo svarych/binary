@@ -21,7 +21,7 @@ class Tests {
     @BeforeAll
     static void setUp() {
         Configuration.browser = "chrome";
-        Configuration.holdBrowserOpen = true;
+        Configuration.holdBrowserOpen = false;
         open("https://volodymyr-kushnir.github.io/recipes/#/");
         getWebDriver().manage().window().maximize();
 
@@ -33,6 +33,8 @@ class Tests {
                 retry.shouldBe(disappear);
             }
         }
+
+        // Ensure, recipe cards is loaded
         card = $(byXpath("(//div[contains(@class,'ui fluid card')])[1]"));
         card.shouldBe(visible);
         //...
