@@ -73,4 +73,9 @@ TO GENERATE REPORT TYPE "allure generate ./target/surefire-reports/ --clean"
 -----------------------------
 Documentation, Demo-report and Examples you can see here: http://allure.qatools.ru/
 
+=============================
+
+* В якості баг-трекера пропоную Atlassian Jira
+* В якості Checklist` та Test Case-трекера пропоную TestRail, яка відмінно інтегрується з Jira
+
 
