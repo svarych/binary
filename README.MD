@@ -63,6 +63,8 @@ TO GENERATE REPORT TYPE "allure generate ./target/surefire-reports/ --clean"
 - 'allure-report' will be generated;
 - To view the results open './allure-report/index.html' in your favorite browser.
 
+![Screenshot](Screenshot_2018-05-14_11-02-19.png?raw=true "Allure report live screenshot")
+
 * Note that 'allure' should be installed on your system
 
 -----------------------------
