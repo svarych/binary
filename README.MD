@@ -47,7 +47,7 @@ BUG REPORT
 Bug Summary: Recipe block not loads with some periodicity
 Severity: critical
 Steps to reproduce: 	open the link: https://volodymyr-kushnir.github.io/recipes/#/
-			You can see error message: ""� Can't fetch recipes because of "randomly forced throw, 25% chance".
+			You can see error message: "Can't fetch recipes because of "randomly forced throw, 25% chance".
 			If you don't see it - reload page until bug is reproduced (25% chance)
 Expected Result: Recipe list loads properly, without error message.
 
