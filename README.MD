@@ -66,7 +66,7 @@ TO RUN TESTS, TYPE "mvn clean test"
 
 -----------------------------
 TO GENERATE REPORT, TYPE "allure generate ./target/surefire-reports/ --clean"
-- 'allure-report' will be generated;
+- 'allure-report' folder with data from surefire-report will be generated;
 - To view the results open './allure-report/index.html' in your favorite browser.
 
 ![Screenshot](Screenshot_2018-05-14_11-02-19.png?raw=true "Allure report live screenshot")
