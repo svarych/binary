@@ -32,6 +32,8 @@ CASES
 5. Click on "Ingredients" link | ExR. Ingredients list appears under link | AcR: Same | STATUS: Passed
 6. Click on "Directions" link | ExR. Directions appears under link | AcR: Same | STATUS: Passed
 
+* ExR = Expected result
+* AcR = Actual result
 =============================
 STORY
 =============================
