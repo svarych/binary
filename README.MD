@@ -62,10 +62,10 @@ Expected Result: Recipe list loads properly, without error message.
 WE CAN AUTOMATE ALL THIS TESTS
 
 -----------------------------
-TO RUN TESTS TYPE "mvn clean test"
+TO RUN TESTS, TYPE "mvn clean test"
 
 -----------------------------
-TO GENERATE REPORT TYPE "allure generate ./target/surefire-reports/ --clean"
+TO GENERATE REPORT, TYPE "allure generate ./target/surefire-reports/ --clean"
 - 'allure-report' will be generated;
 - To view the results open './allure-report/index.html' in your favorite browser.
 
